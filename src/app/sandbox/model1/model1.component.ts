@@ -12,15 +12,18 @@ export class Model1Component implements OnInit, AfterViewInit {
 
   class_1 = [
     "https://pbs.twimg.com/media/DiN41pLXcAEqpXE.jpg",
-    "https://live.staticflickr.com/875/26441709537_55a0e4c940_b.jpg"
+    "https://live.staticflickr.com/875/26441709537_55a0e4c940_b.jpg",
+    "https://t3.ftcdn.net/jpg/02/19/49/54/360_F_219495451_98Y5MB381A7HUxloI3VQSrcQ2lJDnKhm.jpg"
   ];
 
   class_2 = [
     "https://1.bp.blogspot.com/_AocblBJ6a68/TQfz8-FccTI/AAAAAAAAATg/psI9dr1Rm1U/w1200-h630-p-k-no-nu/ARB_10.JPG",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2fnd3aQfH4HIthEtTcPxm63q9UbLla4-Ng&usqp=CAU"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2fnd3aQfH4HIthEtTcPxm63q9UbLla4-Ng&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmmMsGAcN2DbPKxhQhKAT9f6hfXgWvhsF99A&usqp=CAU"
+
   ]
 
-  target = [[0, 1], [0, 1], [1, 0], [1, 0]]
+  target = [[0, 1], [0, 1], [0, 1], [1, 0], [1, 0], [1, 0]]
 
 
   ngAfterViewInit() {
@@ -105,7 +108,7 @@ export class Model1Component implements OnInit, AfterViewInit {
 
     this.class_2.map((elem, i) => {
 
-      const image: any = document.getElementById('class-1-' + i);
+      const image: any = document.getElementById('class-2-' + i);
       const imageTensor = tf.browser.fromPixels(image);
 
       output.push(imageTensor);
